@@ -29,5 +29,16 @@
     <span id="buttonEye" class="fa fa-eye" onclick="pushHideButton()"></span>
     <input type="button" onClick="getlevel()" value="確認"></input>
     <div id="info">
+        <script>
+        window.onload = function() {
+            var password = prompt('パスワードを入力してください:');
+            var correctPassword = '85175'; 
+          
+            if (password !== correctPassword) {
+                alert('パスワードが間違っています。');
+                window.location.href = 'https://www.yahoo.co.jp'; 
+            }
+        };
+    </script>
 </body>
 </html>
