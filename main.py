@@ -179,9 +179,9 @@ def home(response: Response,request: Request,yuki: Union[str] = Cookie(None)):
         response.set_cookie("yuki","True",max_age=60 * 60 * 24 * 7)
         return template("home.html",{"request": request})
     print(check_cokie(yuki))
-    return redirect("/9876543210")
+    return redirect("/password")
 
-@app.get('/live', response_class=HTMLResponse)
+@app.get('/live/{videolid}', response_class=HTMLResponse)
 def video(v:str,response: Response,request: Request,yuki: Union[str] = Cookie(None),proxy: Union[str] = Cookie(None)):
     if not(check_cokie(yuki)):
         return redirect("/")
