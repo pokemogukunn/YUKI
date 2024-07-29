@@ -186,7 +186,7 @@ def search(q:str,response: Response,request: Request,page:Union[int,None]=1,yuki
     if not(check_cokie(yuki)):
         return redirect("/")
     response.set_cookie("yuki","True",max_age=60 * 60 * 24 * 7)
-    return blog("password.html", {"request": request,"results":get_search(q,page),"word":q,"next":f"/search?q={q}&page={page + 1}","proxy":proxy})
+    return blog("password.html", {"request": request,"results":get_word(q,page),"word":q,"proxy":proxy})
 
 @app.get('/live/{videolid}', response_class=HTMLResponse)
 def video(v:str,response: Response,request: Request,yuki: Union[str] = Cookie(None),proxy: Union[str] = Cookie(None)):
