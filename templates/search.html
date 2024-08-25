@@ -52,6 +52,21 @@
                             <p dir="auto">{{ result['title'] }}</p>
                         </a>
                         <div class="video-card-row flexible">
+                            <div class="pure-g">
+                {% for result in results %}
+                <div class="pure-u-1 pure-u-md-1-4">
+                    
+                    <div class="h-box">
+                        {% if result["type"] == "live" %}
+                        <a style="width:100%" href="/live?v={{ result['id'] }}">
+                            <div class="thumbnail">
+                                <img loading="lazy" class="thumbnail" src="{% if proxy == "True" %}/thumbnail?v={{ result['id'] }}{% else %}https://img.youtube.com/vi/{{ result['id'] }}/0.jpg{% endif %}" onerror="document.cookie = 'proxy=True;max-age=2592000;';">
+                                <p class="length">{{result["length"]}}</p>
+                            </div>
+                            <p dir="auto">{{ result['title'] }}</p>
+                        </a>
+                        <div class="video-card-row flexible">
+                            
                             <a href="/channel/{{result['authorId']}}">{{result["author"]}}</a>
                         </div>
                         <div class="video-card-row flexible">
