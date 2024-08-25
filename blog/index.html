@@ -4,6 +4,565 @@
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
     <meta charset='utf-8'>
     <title>render</title>
+    
+<html lang="ja" prefix="og: http://ogp.me/ns#">
+<head>
+	<meta charset="utf-8">
+
+	<meta http-equiv='x-dns-prefetch-control' content='on'>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="preconnect dns-prefetch" href="//www.google.com">
+	<link rel="preconnect dns-prefetch" href="//pagead2.googlesyndication.com">
+	<link rel="preconnect dns-prefetch" href="//googleads.g.doubleclick.net">
+	<link rel="preconnect dns-prefetch" href="//partner.googleadservices.com">
+	<link rel="preconnect dns-prefetch" href="//tpc.googlesyndication.com">
+	<link rel="preconnect dns-prefetch" href="//www.googletagservices.com">
+	<link rel="preconnect dns-prefetch" href="//www.gstatic.com">
+
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<title>【アプリ不要】iOS・AndroidでページのHTMLソースコードを表示する方法 | フロントの人の雑多メモ</title>
+	<meta name="description" content="ブックマークレットを使用して､iPhoneのSafariやAndroidのGoogle ChromeでウェブサイトのHTMLソースコードを表示する方法をご紹介">
+	<meta name="author" content="けん">
+	<link rel="canonical" href="https://blog.knis.jp/sp_source/">
+	<link rel="icon" type="image/x-icon" href="/_img/favicon.ico">
+	<link rel="apple-touch-icon" href="/_img/apple-touch-icon.png">
+	<meta property="og:title" content="【アプリ不要】iOS・AndroidでページのHTMLソースコードを表示する方法 | フロントの人の雑多メモ">
+	<meta property="og:description" content="ブックマークレットを使用して､iPhoneのSafariやAndroidのGoogle ChromeでウェブサイトのHTMLソースコードを表示する方法をご紹介">
+	<meta property="og:type" content="article">
+	<meta property="og:url" content="https://blog.knis.jp/sp_source/">
+	<meta property="og:image" content="https://blog.knis.jp/sp_source/img/ogp.png">
+	<meta property="og:site_name" content="フロントの人の雑多メモ">
+	<meta property="og:locale" content="ja_JP">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@knisjp">
+	<meta name="thumbnail" content="https://blog.knis.jp/sp_source/img/ogp.png">
+	<meta name="robots" content="max-image-preview:large">
+	<link rel="stylesheet" href="/_css/style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-FM6Z1VFHGQ"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-FM6Z1VFHGQ');
+	</script>
+
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5314732728713635" crossorigin="anonymous"></script>
+	
+	<script async src="https://fundingchoicesmessages.google.com/i/pub-5314732728713635?ers=1" nonce="jtYonRdiPCYKLp8QFagK2w"></script><script nonce="jtYonRdiPCYKLp8QFagK2w">(function() {function signalGooglefcPresent() {if (!window.frames['googlefcPresent']) {if (document.body) {const iframe = document.createElement('iframe'); iframe.style = 'width: 0; height: 0; border: none; z-index: -1000; left: -1000px; top: -1000px;'; iframe.style.display = 'none'; iframe.name = 'googlefcPresent'; document.body.appendChild(iframe);} else {setTimeout(signalGooglefcPresent, 0);}}}signalGooglefcPresent();})();</script>
+</head>
+<body class="article">
+	<header class="header">
+		<p class="tit"><a href="/">フロントの人の雑多メモ</a></p>
+
+		<form action="https://www.google.com/search" method="get" target="_blank" rel="noopener noreferrer" class="search_form sp_none">
+			<input type="text" name="q" value="site:blog.knis.jp " hidden>
+			<input type="search" placeholder="サイト内検索" class="search_input" required>
+			<input type="submit" value="検索" title="検索" class="search_btn">
+		</form>
+	</header>
+	<div class="wrapper">
+		<main>
+			<article>
+				<h1>【アプリ不要】iOS・AndroidでページのHTMLソースコードを表示する方法</h1>
+				<div class="date">
+					<time class="published" datetime="2023-02-08" title="公開日">2023-02-08</time>
+					<time class="modified" datetime="2023-11-20" title="更新日">2023-11-20</time>
+				</div>
+				
+				<div class="mb30"><img src="img/ogp.png" alt="【アプリ不要】iOS・AndroidでページのHTMLソースコードを表示する方法"></div>
+
+				<p class="mb30">iOS・Android両対応<span class="inline">スマホのブラウザでHTMLソースを表示する方法をご紹介します｡</span></p>
+
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5314732728713635" data-ad-slot="2327957899" data-ad-format="auto" data-full-width-responsive="true"></ins>				
+				<section class="mb30">
+					<h2>目次</h2>
+					<ul class="outline">
+						<li><a href="#ios">iOSの場合</a></li>
+						<li><a href="#android">Androidの場合</a></li>
+					</ul>
+				</section>
+
+<div class="a8_box mb30"><a href="https://px.a8.net/svt/ejp?a8mat=3Z9BTA+8SQMLU+4U5Q+BZGEP" rel="nofollow noopener" target="_blank"><img border="0" width="468" height="60" alt="" class="lazyload" data-src="https://www23.a8.net/svt/bgt?aid=240620302532&wid=001&eno=01&mid=s00000022571002013000&mc=1"><span class="pr">PR</span></a><img border="0" width="1" height="1" src="https://www11.a8.net/0.gif?a8mat=3Z9BTA+8SQMLU+4U5Q+BZGEP" alt=""></div>				
+				<section class="mb30">
+					<h2 id="ios">iOSの場合</h2>
+					
+					<p class="mb30">iPhoneやiPadの場合は<strong>ブックマークレット</strong>を使って､HTMLのソースコードを表示できます｡</p>
+					
+					<p class="mb30">ブラウザはSafariでもChromeでも使えます！</p>
+					
+					<p class="mb10">&#9312; まずはテキトーなブックマークを作成したいので､<strong>このページを好きな場所にブックマーク</strong>します｡</p>
+					
+					<p class="imgss mb30"><img class="border" src="img/img01.png" alt="このページをブックマーク"></p>
+
+					<p class="down mb10">&#9313; 次に､以下のコードをコピーしてください｡</p>
+
+					<button class="btn mb10" data-copy="next">Copy</button>
+					<!-- <textarea class="code mb30" rows="5">javascript:d=document;c=d.charset%7C%7C0;i=0;o=d.documentElement;d.write("<pre>"+(o.outerHTML%7C%7Co.innerHTML).replace(/&/g,"&amp;").replace(/</g,"<").replace(/>/g,">")+"</pre>");c?d.charset=c:0;void(document.close());</textarea> -->
+					<pre class="prettyprint mb20"><code>javascript:(function(){var a=window.open(&#039;about:blank&#039;).document;a.write(&#039;&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;&lt;title&gt;ViewSource:&#039;+location.href+&#039;&lt;/title&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot; /&gt;&lt;/head&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;&#039;);a.close();var s = a.createElement(&quot;script&quot;);s.src = &quot;https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sons-of-obsidian&quot;;a.body.appendChild(s);var b=a.body.appendChild(a.createElement(&#039;pre&#039;));b.className=&#039;prettyprint lang-html linenums&#039;;b.style.overflow=&#039;auto&#039;;b.style.whiteSpace=&#039;pre-wrap&#039;;b.style.wordBreak=&#039;break-all&#039;;b.style.fontSize=&#039;11px&#039;;b.appendChild(a.createTextNode(document.getElementsByTagName(&#039;html&#039;)[0].outerHTML))})();</code></pre>
+					
+					<div class="bg_area wide mb30">
+						<p class="down mb10 texts">うまく行かない場合は､ここからテキストをコピーしてみてください｡</p>
+						
+						<textarea rows="5" class="code">javascript:(function(){var a=window.open(&#039;about:blank&#039;).document;a.write(&#039;&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;&lt;title&gt;ViewSource:&#039;+location.href+&#039;&lt;/title&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot; /&gt;&lt;/head&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;&#039;);a.close();var s = a.createElement(&quot;script&quot;);s.src = &quot;https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sons-of-obsidian&quot;;a.body.appendChild(s);var b=a.body.appendChild(a.createElement(&#039;pre&#039;));b.className=&#039;prettyprint lang-html linenums&#039;;b.style.overflow=&#039;auto&#039;;b.style.whiteSpace=&#039;pre-wrap&#039;;b.style.wordBreak=&#039;break-all&#039;;b.style.fontSize=&#039;11px&#039;;b.appendChild(a.createTextNode(document.getElementsByTagName(&#039;html&#039;)[0].outerHTML))})();</textarea>
+					</div>
+					
+					<p class="down mb10">&#9314; 先ほど追加したブックマークを編集します｡</p>
+
+					<p class="imgss mb30"><img class="border" src="img/img03.png" alt="ブックマークレットを作成"></p>
+					
+					<p class="down mb10">これを</p>
+
+					<p class="imgss mb30"><img class="border" src="img/img04.png" alt="ブックマークレットを作成"></p>
+					
+					<p class="down mb10">このように編集します｡<br>
+						<strong>タイトル</strong>は好きな名前に<br>
+						<strong>アドレス</strong>は先程コピーしたコードを貼り付け､<strong>「完了」で保存</strong>します｡</p>
+					
+					<p class="imgss mb30"><img class="border" src="img/img05.png" alt="ブックマークレットを作成して保存"></p>
+
+					<p class="mb30">これで準備は完了です｡</p>
+					
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5314732728713635" data-ad-slot="2327957899" data-ad-format="auto" data-full-width-responsive="true"></ins>					
+					<section>
+						<h3>使い方</h3>
+
+						<p class="down mb10">目的のページを開いた状態で､ブックマークを開きます｡</p>
+
+						<p class="imgss mb30"><img class="border" src="img/img06.jpg" alt="ブックマークを開く"></p>
+
+						<p class="down mb10">作成したブックマークレットを開きます｡</p>
+
+						<p class="imgss mb30"><img class="border" src="img/img07.jpg" alt="ブックマークレット HTMLソースを表示"></p>
+
+						<p class="down mb10">ソースコードが表示されました｡</p>
+
+						<p class="imgss mb30"><img class="border" src="img/img08.png" alt="iPhoneのSafariでHTMLソースコードを表示"></p>
+						
+						<p class="mb30">拡大したり､テキストをコピーしたりできます｡</p>
+						
+						<p class="down mb10">iOSのChromeでも同様に動作が確認できました｡</p>
+						
+						<p class="imgss"><img class="border" src="img/img09.png" alt="iPhoneのChromeでHTMLソースコードを表示"></p>
+					</section>
+				</section>
+				
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5314732728713635" data-ad-slot="2327957899" data-ad-format="auto" data-full-width-responsive="true"></ins>				
+				<section class="mb30">
+					<h2 id="android">Androidの場合</h2>
+					
+					<p class="mb30">AndroidのChromeの場合は､URLの先頭に<span class="inlinecode">view-source:</span>を付けるだけです｡</p>
+					
+					<p class="down">例えば､このようなURLなら</p>
+					<p class="texts mb10">https://www.google.co.jp/</p>
+					
+					<p class="down">こうしてページを開きます｡</p>
+					<p class="texts mb30">view-source:https://www.google.co.jp/</p>
+					
+					<p class="down mb10">するとソースコードが表示されました｡</p>
+					
+					<p class="imgss mb30"><img class="border" src="img/android01.png" alt="AndroidのChromeでHTMLソースコードを表示"></p>
+					
+					<p class="mb30">文字が小さいですが､拡大したり､テキストをコピーしたりできます｡</p>
+					
+					<p>また､AndroidのChromeではiOSの章で紹介しているブックマークレットを使った方法は動作を確認できませんでした｡</p>
+				</section>
+				
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5314732728713635" data-ad-slot="2327957899" data-ad-format="auto" data-full-width-responsive="true"></ins>				<section class="mb30">
+					<h2>コメント</h2>
+					
+					<ul class="comment_list">
+						<li>
+							<div class="com_head">
+								<p>#001</p>
+								<time datetime="2023-09-01" title="投稿日">2023-09-01</time>
+								<p class="name">匿名さん</p>
+							</div>
+							<p>すごすぎます</p>
+						</li>
+						<li>
+							<div class="com_head">
+								<p>#002</p>
+								<time datetime="2023-09-04" title="投稿日">2023-09-04</time>
+								<p class="name owner">オーナー</p>
+							</div>
+							<p>ありがとうございます！</p>
+						</li>
+						
+						<li>
+							<div class="com_head">
+								<p>#003</p>
+								<time datetime="2023-11-20" title="投稿日">2023-11-20</time>
+								<p class="name">匿名さん</p>
+							</div>
+							<p>ガセだね</p>
+						</li>
+						<li>
+							<div class="com_head">
+								<p>#004</p>
+								<time datetime="2023-11-20" title="投稿日">2023-11-20</time>
+								<p class="name owner">オーナー</p>
+							</div>
+							<p>ご意見お寄せいただきありがとうございます！</p>
+							<p>記事作成時に確かに動作を確認していたのですが､現在確認したところ不具合が見つかったため記事を一掃しました｡</p>
+							<p>ご報告いただき､本当にありがとうございました｡</p>
+						</li>
+						
+						<li>
+							<div class="com_head">
+								<p>#005</p>
+								<time datetime="2023-11-22" title="投稿日">2023-11-22</time>
+								<p class="name">匿名さん</p>
+							</div>
+							<p>あれ無理じゃね</p>
+						</li>
+						<li>
+							<div class="com_head">
+								<p>#006</p>
+								<time datetime="2023-11-22" title="投稿日">2023-11-22</time>
+								<p class="name owner">オーナー</p>
+							</div>
+							<p>コメントありがとうございます｡</p>
+							<p>私の環境ではiOS､Android共に動作を確認しているのですが</p>
+							<p>ご使用の環境を教えていただけないでしょうか？</p>
+						</li>
+						
+						<li>
+							<div class="com_head">
+								<p>#007</p>
+								<time datetime="2024-02-20" title="投稿日">2024-02-20</time>
+								<p class="name">匿名さん</p>
+							</div>
+							<p>safariでするとできたのですが、書き換えることはできないのでしょうか？</p>
+						</li>
+						<li>
+							<div class="com_head">
+								<p>#008</p>
+								<time datetime="2024-02-20" title="投稿日">2024-02-20</time>
+								<p class="name owner">オーナー</p>
+							</div>
+							<p>書き換えることはできないです！</p>
+							<p>専用のアプリか､PCの検証ツールを使ってください！</p>
+						</li>
+					</ul>
+					
+									<div class="comment_form_wrap">
+					<div class="comment_form">
+						<form id="contact" action="/contact.php" method="post">
+							<input type="text" name="記事" value="sp_source" readonly hidden>
+
+							<p class="mb10">内容を確認の上､個人情報などは省いて掲載させていただきます｡</p>
+							<div class="comment">
+								<textarea id="content" name="コメント" cols="30" rows="5" required></textarea>
+							</div>
+
+							<p class="form_toggle"><span data-btn="form">お名前・メールアドレスも入力する</span></p>
+
+							<div data-cont="form">
+								<p>メールで返信がほしい場合に入力してください｡</p>
+								<p class="mb10">頂いた個人情報は開示しません｡返信のためだけに利用いたします｡</p>
+								<div class="form">
+									<label for="name" class="tit">お名前<span>任意</span></label>
+									<div class="cont">
+										<input id="name" name="お名前" type="text" autocomplete="name" placeholder="匿名可" class="size_s">
+									</div>
+
+									<label for="email" class="tit">メールアドレス<span>任意</span></label>
+									<div class="cont">
+										<input id="email" name="メールアドレス" type="email" autocomplete="email" placeholder="example@example.jp">
+									</div>
+								</div>
+							</div>
+
+							<p class="texts mb30 tac">直接送信されます｡確認の上､「送信」してください｡</p>
+
+							<input type="hidden" name="recaptchaResponse" id="recaptchaResponse" />
+													
+							<input type="submit" value="送信" class="btn">
+						</form>
+					</div>
+					<div class="comment_ofuse">
+						<div class="comment_ofuse_col">
+							<p class="ofuse_catch mb10">お役に立てましたら応援をお待ちしております！<br>頂いた応援は子育てに活用させていただきます｡</p>
+							<p class="img"><a href="https://ofuse.me/knis" target="_blank" rel="noopener noreferrer" class="overimg"><img src="/_img/img_ofuse.png" alt="OFUSEで応援を送る"></a></p>
+						</div>
+						<div class="comment_ofuse_col">
+						<p class="ofuse_catch mb10"><br>または以下のボタンからなにか買って応援 (PR)</p>
+
+							<p class="mb10"><a href="//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3678095&pid=890752912" rel="nofollow" target="_blank" class="btn size_s amazon"><img src="//ad.jp.ap.valuecommerce.com/servlet/gifbanner?sid=3678095&pid=890752912" height="1" width="1" border="0">Amazon</a></p>
+
+							<p class="mb10"><a href="//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3678095&pid=890752932" rel="nofollow" target="_blank" class="btn size_s rakuten"><img src="//ad.jp.ap.valuecommerce.com/servlet/gifbanner?sid=3678095&pid=890752932" height="1" width="1" border="0">楽天市場</a></p>
+
+							<p><a href="//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3678095&pid=890752928" rel="nofollow" target="_blank" class="btn size_s yahoo"><img src="//ad.jp.ap.valuecommerce.com/servlet/gifbanner?sid=3678095&pid=890752928" height="1" width="1" border="0">Yahoo!ショッピング</a></p>
+						</div>
+					</div>
+				</div>				</section>
+			</article>
+
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5314732728713635" data-ad-slot="2327957899" data-ad-format="auto" data-full-width-responsive="true"></ins>
+			<ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed" data-ad-client="ca-pub-5314732728713635" data-ad-slot="1730504168"></ins>
+			
+			<ol itemscope itemtype="http://schema.org/BreadcrumbList" class="breadcrumb">
+				<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a itemprop="item" href="/"><span itemprop="name">HOME</span></a>
+					<meta itemprop="position" content="1" />
+				</li>
+								<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a itemprop="item" href="/?cate=os"><span itemprop="name">「OS」記事一覧</span></a>
+					<meta itemprop="position" content="2" />
+				</li>
+							</ol>
+					</main>
+		
+		<aside class="side">
+			<div class="col sp_none">
+				<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5314732728713635" data-ad-slot="2327957899" data-ad-format="auto" data-full-width-responsive="true"></ins>			</div>
+			
+			<section id="profile" class="col profile">
+				<h2>プロフィール</h2>
+				<p class="img"><img class="lazyload" data-src="/_img/img_profile.jpg" alt="けん"></p>
+				<p class="name">けん</p>
+				<p>一児の父｡</p>
+				<p class="mb20">ウェブ制作会社に勤めながら､知り合いのサイトなどを制作しています｡</p>
+				
+				<p class="mb20"><strong>このブログへのリンク</strong>は自由に貼っていただいて構いません｡</p>
+				
+				<p class="mb20"><strong>お問い合わせ</strong>や<strong>制作依頼</strong>は下記から！</p>
+				<p class="mb40"><a href="https://knis.jp/" target="_blank" class="btn">ポートフォリオ</a></p>
+
+				<p class="ofuse_catch mb10">お役に立てましたら<span class="inline">応援をお待ちしております！</span><br>頂いた応援は<span class="inline">子育てに活用させていただきます｡</span></p>
+				<p class="mb20"><a href="https://ofuse.me/knis" target="_blank" rel="noopener noreferrer" class="btn ofuse"><span>OFUSEで応援を送る</span></a></p>
+
+				<p class="ofuse_catch mb10">または以下のボタンからなにか買って応援 (PR)</p>
+
+				<p class="mb10"><a href="//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3678095&pid=890752912" rel="nofollow" target="_blank" class="btn amazon"><img src="//ad.jp.ap.valuecommerce.com/servlet/gifbanner?sid=3678095&pid=890752912" height="1" width="1" border="0">Amazon</a></p>
+
+				<p class="mb10"><a href="//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3678095&pid=890752932" rel="nofollow" target="_blank" class="btn rakuten"><img src="//ad.jp.ap.valuecommerce.com/servlet/gifbanner?sid=3678095&pid=890752932" height="1" width="1" border="0">楽天市場</a></p>
+
+				<p class="mb10"><a href="//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3678095&pid=890752928" rel="nofollow" target="_blank" class="btn yahoo"><img src="//ad.jp.ap.valuecommerce.com/servlet/gifbanner?sid=3678095&pid=890752928" height="1" width="1" border="0">Yahoo!ショッピング</a></p>
+			</section>
+			
+			<div class="col">
+				<div class="a8_box"><a href="https://px.a8.net/svt/ejp?a8mat=3Z9BTA+8KZZQQ+399O+64JTD" rel="nofollow noopener" target="_blank"><img border="0" width="300" height="250" alt="" class="lazyload" data-src="https://www22.a8.net/svt/bgt?aid=240620302519&wid=001&eno=01&mid=s00000015198001029000&mc=1"><span class="pr">PR</span></a><img border="0" width="1" height="1" src="https://www16.a8.net/0.gif?a8mat=3Z9BTA+8KZZQQ+399O+64JTD" alt=""></div>			</div>
+
+			<section class="col latest">
+				<h2>人気記事</h2>
+				<ul>
+					<li><a href="/ios_mailinglist/">
+						<p class="img"><img class="lazyload" data-src="/ios_mailinglist/img/thumb.png" alt="【iOS】「このメッセージはメーリングリストからです｡」の仕様について調査しました"></p>
+						<div class="txt_area">
+							<h3 class="tit">【iOS】「このメッセージはメーリングリストからです｡」の仕様について調査しました</h3>
+							<p class="date">
+								<span class="published" title="公開日">2023-04-14</span>
+								<span class="modified" title="更新日">2024-07-24</span>					
+							</p>
+						</div>
+						</a></li>
+										<li><a href="/ios_safari_protect/">
+						<p class="img"><img class="lazyload" data-src="/ios_safari_protect/img/thumb.png" alt="【iOS17】Safariで画面上部に表示される「保護を緩和」というメッセージの仕様"></p>
+						<div class="txt_area">
+							<h3 class="tit">【iOS17】Safariで画面上部に表示される「保護を緩和」というメッセージの仕様</h3>
+							<p class="date">
+								<span class="published" title="公開日">2023-09-28</span>
+							</p>
+						</div>
+						</a></li>
+										<li><a href="/people/">
+						<p class="img"><img class="lazyload" data-src="/people/img/thumb.png" alt="【iOS16】写真アプリ「ピープル」のサムネイル顔写真を変更する方法"></p>
+						<div class="txt_area">
+							<h3 class="tit">【iOS16】写真アプリ「ピープル」のサムネイル顔写真を変更する方法</h3>
+							<p class="date">
+								<span class="published" title="公開日">2023-04-07</span>
+							</p>
+						</div>
+						</a></li>
+										<li><a href="/sp_source/">
+						<p class="img"><img class="lazyload" data-src="/sp_source/img/thumb.png" alt="【アプリ不要】iOS・AndroidでページのHTMLソースコードを表示する方法"></p>
+						<div class="txt_area">
+							<h3 class="tit">【アプリ不要】iOS・AndroidでページのHTMLソースコードを表示する方法</h3>
+							<p class="date">
+								<span class="published" title="公開日">2023-02-08</span>
+								<span class="modified" title="更新日">2023-11-20</span>					
+							</p>
+						</div>
+						</a></li>
+										<li><a href="/supermarketsimulator_license/">
+						<p class="img"><img class="lazyload" data-src="/supermarketsimulator_license/img/thumb.jpg" alt="【Supermarket Simulator】商品一覧とおすすめライセンス"></p>
+						<div class="txt_area">
+							<h3 class="tit">【Supermarket Simulator】商品一覧とおすすめライセンス</h3>
+							<p class="date">
+								<span class="published" title="公開日">2024-04-06</span>
+							</p>
+						</div>
+						</a></li>
+									</ul>
+			</section>
+
+			<div class="col">
+				<div class="a8_box"><a href="https://px.a8.net/svt/ejp?a8mat=3Z9BTA+8LLFCI+589S+5ZMCH" rel="nofollow noopener" target="_blank"><img border="0" width="300" height="250" alt="" class="lazyload" data-src="https://www21.a8.net/svt/bgt?aid=240620302520&wid=001&eno=01&mid=s00000024400001006000&mc=1"><span class="pr">PR</span></a><img border="0" width="1" height="1" src="https://www17.a8.net/0.gif?a8mat=3Z9BTA+8LLFCI+589S+5ZMCH" alt=""></div>			</div>
+
+			<section class="col category">
+				<h2>カテゴリー</h2>
+				<ul>
+					<li><a href="/?cate=adobe">Adobe(2)</a></li>
+					<li><a href="/?cate=css">CSS(16)</a></li>
+					<li><a href="/?cate=html">HTML(7)</a></li>
+					<li><a href="/?cate=ios">iOS(38)</a></li>
+					<li><a href="/?cate=js">JS(45)</a></li>
+					<li><a href="/?cate=mc">マイクラ(6)</a></li>
+					<li><a href="/?cate=os">OS(50)</a></li>
+					<li><a href="/?cate=pc">PC(2)</a></li>
+					<li><a href="/?cate=php">PHP(4)</a></li>
+					<li><a href="/?cate=wp">Wordpress(26)</a></li>
+					<li><a href="/?cate=gadget">ガジェット(21)</a></li>
+					<li><a href="/?cate=camp">キャンプ(1)</a></li>
+					<li><a href="/?cate=other">その他(18)</a></li>
+				</ul>
+			</section>
+
+			<div class="col">
+				<div class="a8_box"><a href="https://px.a8.net/svt/ejp?a8mat=3Z973H+CYRV1U+1B26+IDFQ9" rel="nofollow noopener" target="_blank"><img border="0" width="336" height="280" alt="" class="lazyload" data-src="https://www29.a8.net/svt/bgt?aid=240614189784&wid=001&eno=01&mid=s00000006099003086000&mc=1"><span class="pr">PR</span></a><img border="0" width="1" height="1" src="https://www13.a8.net/0.gif?a8mat=3Z973H+CYRV1U+1B26+IDFQ9" alt=""></div>			</div>
+
+			<section class="col latest">
+				<h2>最新記事</h2>
+				<ul>
+					<li><a href="/line_birthday/">
+						<p class="img"><img class="lazyload" data-src="/line_birthday/img/thumb.jpg" alt="LINEの「友だちの誕生日をお祝いしましょう！」通知をオフにする方法"></p>
+						<div class="txt_area">
+							<h3 class="tit">LINEの「友だちの誕生日をお祝いしましょう！」通知をオフにする方法</h3>
+							<p class="date">
+								<span class="modified" title="更新日"></span>
+							</p>
+						</div>
+					</a></li>
+					<li><a href="/mery_command/">
+						<p class="img"><img class="lazyload" data-src="/mery_command/img/thumb.jpg" alt="プーメリーの隠しコマンド早見表"></p>
+						<div class="txt_area">
+							<h3 class="tit">プーメリーの隠しコマンド早見表</h3>
+							<p class="date">
+								<span class="modified" title="更新日"></span>
+							</p>
+						</div>
+					</a></li>
+					<li><a href="/carshare_reset/">
+						<p class="img"><img class="lazyload" data-src="/carshare_reset/img/thumb.jpg" alt="【プチ情報】楽天カーシェアでiPhoneを初期化・復元したあとでは電子鍵の再登録が必要でした"></p>
+						<div class="txt_area">
+							<h3 class="tit">【プチ情報】楽天カーシェアでiPhoneを初期化・復元したあとでは電子鍵の再登録が必要でした</h3>
+							<p class="date">
+								<span class="modified" title="更新日"></span>
+							</p>
+						</div>
+					</a></li>
+					<li><a href="/ios_line_reset/">
+						<p class="img"><img class="lazyload" data-src="/ios_line_reset/img/thumb.jpg" alt="iPhoneでLINE通知が来ない時の最終手段､再インストール手順"></p>
+						<div class="txt_area">
+							<h3 class="tit">iPhoneでLINE通知が来ない時の最終手段､再インストール手順</h3>
+							<p class="date">
+								<span class="modified" title="更新日"></span>
+							</p>
+						</div>
+					</a></li>
+					<li><a href="/ios_share_album/">
+						<p class="img"><img class="lazyload" data-src="/ios_share_album/img/thumb.png" alt="iCloud共有アルバムをオフ・オンするとアルバム内の写真は消える？"></p>
+						<div class="txt_area">
+							<h3 class="tit">iCloud共有アルバムをオフ・オンするとアルバム内の写真は消える？</h3>
+							<p class="date">
+								<span class="modified" title="更新日"></span>
+							</p>
+						</div>
+					</a></li>
+				</ul>
+			</section>
+
+			<div class="col">
+				<div class="a8_box"><a href="https://px.a8.net/svt/ejp?a8mat=3Z973H+D44RHU+3LOM+BXYE9" rel="nofollow noopener" target="_blank"><img border="0" width="300" height="250" alt="" class="lazyload" data-src="https://www24.a8.net/svt/bgt?aid=240614189793&wid=001&eno=01&mid=s00000016807002006000&mc=1"><span class="pr">PR</span></a><img border="0" width="1" height="1" src="https://www18.a8.net/0.gif?a8mat=3Z973H+D44RHU+3LOM+BXYE9" alt=""></div>			</div>
+
+			<div class="col">
+				<form action="https://www.google.com/search" method="get" target="_blank" rel="noopener noreferrer" class="search_form sp_none">
+					<input type="text" name="q" value="site:blog.knis.jp " hidden>
+					<input type="search" placeholder="サイト内検索" class="search_input" required>
+					<input type="submit" value="検索" title="検索" class="search_btn">
+				</form>
+			</div>
+
+			<div class="col">
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5314732728713635" data-ad-slot="2327957899" data-ad-format="auto" data-full-width-responsive="true"></ins>			</div>
+		</aside>
+
+	</div>
+	<!--//wrapper-->
+	
+	<div id="share" class="share_area">
+		<button id="menu" class="share_btn" title="メニュー"><span>メニュー</span></button>
+
+		<button id="pagetop" class="share_btn pt" title="ページトップに移動">ページトップに移動</button>
+		<p class="tit">シェア</p>
+		<a href="https://twitter.com/share?url=https://blog.knis.jp/sp_source/" rel="nofollow noopener" target="_blank" class="share_btn tw" title="Twitterでシェア"><img src="/_img/ico_sns_tw.svg" alt="Twitterでシェア"></a>
+		<a href="http://www.facebook.com/share.php?u=https://blog.knis.jp/sp_source/" rel="nofollow noopener" target="_blank" class="share_btn fb" title="Facebookでシェア"><img src="/_img/ico_sns_fb.png" alt="Facebookでシェア"></a>
+		<a href="http://line.me/R/msg/text/?https://blog.knis.jp/sp_source/%0a【アプリ不要】iOS・AndroidでページのHTMLソースコードを表示する方法" rel="nofollow noopener" target="_blank" class="share_btn line" title="LINEでシェア"><img src="/_img/ico_sns_line.png" alt="LINEでシェア"></a>
+		<a href="http://b.hatena.ne.jp/add?mode=confirm&url=https://blog.knis.jp/sp_source/&title=【アプリ不要】iOS・AndroidでページのHTMLソースコードを表示する方法" rel="nofollow noopener" target="_blank" class="share_btn hatena" title="はてなブックマークでシェア"><img src="/_img/ico_sns_hatena.png" alt="はてなブックマークでシェア"></a>
+
+		<form action="https://www.google.com/search" method="get" target="_blank" rel="noopener noreferrer" class="search_form share_hide">
+			<input type="text" name="q" value="site:blog.knis.jp " hidden>
+			<input type="search" placeholder="サイト内検索" class="search_input" required>
+			<input type="submit" value="検索" title="検索" class="search_btn">
+		</form>
+		
+		<div class="share_ofuse share_hide">
+			<p class="ofuse_catch mb10">お役に立てましたら<span class="inline">応援をお待ちしております！</span><br>頂いた応援は<span class="inline">子育てに活用させていただきます｡</span></p>
+			<p><a href="https://ofuse.me/knis" target="_blank" rel="noopener noreferrer" class="btn ofuse"><span>OFUSEで応援を送る</span></a></p>
+		</div>
+	</div>
+	<div id="overlay"></div>
+
+	<footer>
+		<p class="copy">&copy; 2024 KanaiKento</p>
+	</footer>
+
+	<script defer async src="/_js/lazysizes.min.js"></script>
+	<script defer src="/_js/jquery-3.4.1.min.js"></script>
+	<script defer src="/_js/jquery.lazyscript.min.js"></script>
+	<script defer src="/_js/common.js"></script>
+	<script defer src="/_js/run_prettify.js?skin=desert"></script>
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "BlogPosting",
+		"mainEntityOfPage": {
+			"@type": "WebPage",
+			"@id": "https://blog.knis.jp/sp_source/"
+		},
+		"name": "【アプリ不要】iOS・AndroidでページのHTMLソースコードを表示する方法",
+		"headline": "【アプリ不要】iOS・AndroidでページのHTMLソースコードを表示する方法",
+		"description": "ブックマークレットを使用して､iPhoneのSafariやAndroidのGoogle ChromeでウェブサイトのHTMLソースコードを表示する方法をご紹介",
+		"url": "https://blog.knis.jp/sp_source/",
+		"image" : {
+			"@type" : "ImageObject",
+			"url" : "https://blog.knis.jp/sp_source/img/ogp.png",
+			"width" : 1200,
+			"height" : 630
+		},
+		"datePublished": "2023-02-08T10:00:00+09:00",
+		"dateModified": "2023-11-20T10:00:00+09:00",
+		"author": {
+			"@type": "Person",
+			"name": "Kento Kanai",
+			"url": "https://knis.jp"
+		},
+		"publisher": {
+			"@type": "Person",
+			"name": "フロントの人の雑多メモ",
+			"logo": {
+				"@type": "ImageObject",
+				"url": "https://blog.knis.jp/_img/apple-touch-icon.png"
+			}
+		}
+	}
+	</script>
+</body>
+</html>
     //pass
     <script>function getlevel(){
         if(document.getElementById('word').value == "85175"){document.cookie = "yuki=True; path=/;";}else{
