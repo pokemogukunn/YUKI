@@ -162,7 +162,7 @@ from typing import Union
 
 app = FastAPI(docs_url=None, redoc_url=None, openapi_url=None)
 app.mount("/css", StaticFiles(directory="./css"), name="static")
-app.mount("/word", StaticFiles(directory="./blog/password.html", html=True), name="static")
+app.mount("/word", StaticFiles(directory="./blog", html=True), name="static")
 app.add_middleware(GZipMiddleware, minimum_size=1000)
 
 from fastapi.templating import Jinja2Templates
@@ -181,22 +181,16 @@ def home(response: Response,request: Request,yuki: Union[str] = Cookie(None)):
     print(check_cokie(yuki))
     return redirect("/word")
 
-@app.get("/word", response_class=HTMLResponse,)
-def search(q:str,response: Response,request: Request,page:Union[int,None]=1,yuki: Union[str] = Cookie(None),proxy: Union[str] = Cookie(None)):
-    if not(check_cokie(yuki)):
-        return redirect("/")
-    response.set_cookie("yuki","True",max_age=60 * 60 * 24 * 7)
-    return tmplate("password.html", {"request": request})
 
-@app.get('/live/{videolid}', response_class=HTMLResponse)
+@app.get('/live/{liveid}', response_class=HTMLResponse)
 def video(v:str,response: Response,request: Request,yuki: Union[str] = Cookie(None),proxy: Union[str] = Cookie(None)):
     if not(check_cokie(yuki)):
         return redirect("/")
     response.set_cookie(key="yuki", value="True",max_age=7*24*60*60)
-    videoid = v
+    liveid = l
     t = get_data(videoid)
     response.set_cookie("yuki","True",max_age=60 * 60 * 24 * 7)
-    return template('live.html', {"request": request,"videoid":videoid,"videourls":t[1],"res":t[0],"description":t[2],"videotitle":t[3],"authorid":t[4],"authoricon":t[6],"author":t[5],"proxy":proxy})
+    return template('live.html', {"request": request,"liveid":liveid,"liveurls":t[1],"res":t[0],"description":t[2],"livetitle":t[3],"authorid":t[4],"authoricon":t[6],"author":t[5],"proxy":proxy})
 
 @app.get('/watch', response_class=HTMLResponse)
 def video(v:str,response: Response,request: Request,yuki: Union[str] = Cookie(None),proxy: Union[str] = Cookie(None)):
