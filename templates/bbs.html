@@ -1,4 +1,32 @@
 <!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        window.onload = function() {
+            const currentUrl = window.location.href;
+
+            if (currentUrl === "http://if46.inetnf.net:443/") {
+                const previousPage = document.referrer;
+
+                if (previousPage) {
+                    alert("このページへのアクセスは禁止されています。前のページに戻ります。");
+                    window.location.href = previousPage; // 前に開いていたページにリダイレクト
+                } else {
+                    alert("このページへのアクセスは禁止されています。");
+                    window.location.href = "about:blank"; // リファラーがない場合は空白ページにリダイレクト
+                }
+            }
+        };
+    </script>
+</head>
+<body>
+    <h1>このページはアクセスできません</h1>
+    <p>アクセスをブロックしました。</p>
+</body>
+</html>
+
 <html>
 <head>
     <title>現在開発中</title>
